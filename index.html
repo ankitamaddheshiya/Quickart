@@ -1,12 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!
+    </title>
+    <link rel="icon" href="https://static-assets-web.flixcart.com/www/promos/new/20150528-140547-favicon-retina.ico" />
+    <!--stylesheet-->
+    <link rel="stylesheet" href="style.css" />
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 </head>
+
 <body>
-    
+    <header>
+        <div class="logo_Container">
+            <div class="logo">
+                <img
+                    src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png" />
+            </div>
+            <div class="explore">
+                <a href="explore.html">
+                    <p>Explore <span class="plus-icon">Plus</span></p>
+                    <img
+                        src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png" />
+                </a>
+            </div>
+        </div>
+
+        <div class="search_container">
+            <form id="search_form">
+                <input type="text" placeholder="Search for products brands and more" id="search_input" />
+            </form>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <!--recent search-->
+            <div class="recent_Search">
+
+            </div>
+        </div>
+
+        <div class="loginBtn_container">
+            <a href="#">Login</a>
+            <div class="login_menu">
+                <div class="login_menu_list">
+                    <div class="login_menu_top">
+                        <p>New Customer?</p>
+                        <a href="#">Sign Up</a>
+                    </div>
+                    <div class="menu_nav_link">
+                        <a
+                            href="https://www.flipkart.com/account/login?ret=%2Faccount%2F%3Frd%3D0%26link%3Dhome_account">
+                            <i class="fa-solid fa-circle-user"></i>
+                            <p>My Profile</p>
+                        </a>
+                        <a href="#">
+                            <img src="./icon/plusBlue.svg" class="menu_nav_icon" />
+                            <p>Flipkart plus zone</p>
+                        </a>
+                        <a href="#">
+                            <img src="./icon/orderIcon.svg" class="menu_nav_icon" />
+                            <p>Order</p>
+                        </a>
+                        <a href="#">
+                            <img src="./icon/wishlistIcon.svg" class="menu_nav_icon" />
+                            <p>Wishlist</p>
+                        </a>
+                        <a href="#">
+                            <img src="./icon/rewardIcon.svg" class="menu_nav_icon" />
+                            <p>Rewards</p>
+                        </a>
+                        <a href="#">
+                            <img src="./icon/giftIcon.svg" class="menu_nav_icon" />
+                            <p>Gift Cards</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="nav-link"
+            href="https://seller.flipkart.com/sell-online/?utm_source=fkwebsite&utm_medium=websitedirect">
+            Become a Seller
+        </a>
+
+        <div class="more_link">
+            More
+            <i class="fa-solid fa-angle-down icon_more"></i>
+            <div class="more_menu">
+                <div class="more_menu_list">
+
+                    <a href="https://www.flipkart.com/communication-preferences/push?t=all">
+                        <img src="./icon/notificationIcon.svg" class="menu_nav_icon" />
+                        <p>Notification Preferences</p>
+                    </a>
+                    <a href="https://www.flipkart.com/helpcentre">
+                        <img src="./icon/customerIcon.svg" class="menu_nav_icon" />
+                        <p>24 X 7 Customer Care</p>
+                    </a>
+                    <a href="https://advertising.flipkart.com/login?returl=/?otracker=ch_vn_advertise_header">
+                        <img src="./icon/advertiseIcon.svg" class="menu_nav_icon" />
+                        <p>Advertise</p>
+                    </a>
+                    <a href="https://www.flipkart.com/mobile-apps?otracker=ch_vn_mobile_apps">
+                        <img src="./icon/downloadIcon.svg" class="menu_nav_icon" />
+                        <p>Download App</p>
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+
+        <a href="https://www.flipkart.com/viewcart?exploreMode=true&preference=FLIPKART">
+            <div class="card_link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Cart</p>
+            </div>
+        </a>
+
+    </header>
+
+
+    <main>
+        <div class="featureProducts">
+            <div class="featureProduct_list">
+                  <div class="featureProducts-div">
+                   <a href="topOffer.html">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/47e5c31ef7dcce1e.png?q=100" alt="top-offers">
+                    <h4> Top Offers </h4>
+                   </a>
+                  </div>
+                  <div class="featureProducts-div">
+                    <a href="mobile&tablet.html">
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/5f8bd5669e19e724.png?q=100" alt="mobile-product">
+                    <h4>Mobile & Tablates</h4>
+                    </a>
+                  </div>
+                  <div class="featureProducts-div">
+                   <a href="electronics.html">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/361d53b8725c2d2d.png?q=100" alt="laptops">
+                    <h4>Electronics</h4>
+                   </a>
+                  </div>
+                  <div class="featureProducts-div">
+                   <a href="tv&appliances.html">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/904f3c8e7101408b.png?q=100" alt="TV">
+                    <h4>TVs & Appliances</h4>
+                   </a>
+                  </div>
+                  <div class="featureProducts-div">
+                   <a href="fashion.html">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/7f7355480c6adc16.png?q=100" alt="fasion">
+                    <h4>Fashion</h4>
+                   </a>
+                  </div>
+                  <div class="featureProducts-div">
+                    <a href="beauty.html">
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/f97d6138516056bc.png?q=100" alt="beauty">
+                    <h4>Beauty</h4>
+                    </a>
+                  </div>
+                  <div class="featureProducts-div">
+                    <a href="home&furniture.html">
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/6728ed3cf145562c.png?q=100" alt="homesacceres">
+                    <h4>Home & Furniture</h4>
+                    </a>
+                  </div>
+                  <div class="featureProducts-div">
+                    <a href="flight.html">
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/007910082ae6355b.png?q=100" alt="flight">
+                    <h4>Flights</h4>
+                    </a>
+                  </div>
+                  <div class="featureProducts-div">
+                    <a href="grocery.html">
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/46376ceed3448aff.png?q=100" alt="grocery">
+                    <h4>Grocery</h4>
+                    </a>
+                  </div>
+            </div>
+        </div>
+
+        <!--image slider-->
+        <div class="imageSliderContainer">
+               
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="https://rukminim1.flixcart.com/fk-p-flap/844/140/image/a01995f8c2dc7ebd.jpg?q=50" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB526HPm9JdeQXQ-yRCDYoBq7IbtKMA1aV0g&usqp=CAU" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEMTc-KfBUuVuLrDTECHH9dV1XWLq9irMfCh1-JalMgZgLKHuy7qHl2t6ypEiS-pXhXg&usqp=CAU" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqq1rsdIZ5-AzNy7-WjRV0QtNUyB25UHZLkQ&usqp=CAU" alt="">
+                  </div>
+                  
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+
+        </div>
+
+
+
+
+
+<!-- bank partner div -->
+<div class="bankpartner_container">
+    <div class="firstchild">
+        <div class="secondchild">
+            <div class="itemcontainer">
+                <div class="imagdiv">
+                    <img src="https://1000logos.net/wp-content/uploads/2016/11/Citibank-Logo.png" alt="">
+                
+                    <img src="https://zeevector.com/wp-content/uploads/ICICI-Credit-Card-Logo-PNG@ZEEVECTOR.png" alt="">
+                </div>
+            </div>
+            <div class="itemcontainer">
+                <h3>10% Instant Discount</h3>
+                <h3>on Debit & Credit Cards</h3>
+            </div>
+        </div>
+        <div></div>
+    </div>
+</div>
+        <!--Best of electronic-->
+        <div class="bestofElectronic_Contianer">
+            <div class="bestofElectronic_list">
+                <div class="BestofElectronic_item">
+                    <div class="bestofElectronic_bigText">Best of Electronics</div>
+                    <a href="https://www.flipkart.com/offers-list/content?screen=dynamic&pk=themeViews%3DDT-OMU-1%3ADealcard~widgetType%3DdealCard~contentType%3Dneo&wid=2.dealCard.OMU&wid=3.dealCard.OMU_3&otracker=hp_omu_Best%2Bof%2BElectronics_3&otracker1=hp_omu_PINNED_neo%2Fmerchandising_Best%2Bof%2BElectronics_NA_wc_view-all_3"
+                        class="viewAllBtn">View All</a>
+                    <div class="bestofElectronicmoreOption">
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/278/278/image/7593e7b6640822c1.jpg?q=90" />
+                    </div>
+                </div>
+
+                <div class="bestofElctronic_product_item">
+                   
+                </div>
+
+            </div>
+        </div>
+         
+        <!-- offer section start from hear -->
+        <div class="offer_container">
+            <div class="offerbanner">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZMMeUykIgvdNdEYTg7QJNxT5HfIhA7sGjlw&usqp=CAU" alt="">
+            </div>
+            <div class="offerbanner">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpztfVdfrUl0b0qaMTXrw6WeQed8f4BWt9vg&usqp=CAU" alt="">
+            </div>
+            <div class="offerbanner">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH08oP3kR5leyV4Qc7zyQMCrSLNK25d8DA6Q&usqp=CAU" alt="">
+            </div>
+            <div class="offerbanner">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRevPa9VOjBidSPNEY22PtzUiN6_lo1Tpp_pQ&usqp=CAU" alt="">
+            </div>
+            <div class="offerbanner">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3RHYj4O-xS27pFdqxMaE9rVLtNPMqcJFoIA&usqp=CAU" alt="">
+            </div>
+            <div class="offerbanner">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMaqjgi-BMS-e4uQuBEvh1VDdsATIzY99hBg&usqp=CAU" alt="">
+            </div>
+        </div>
+
+        <!-- best of fashion brand from hear -->
+        <div class="bestoffashion_Contianer">
+            <div class="bestoffashion_list">
+                <div class="bestoffashion_item">
+                    <div class="bestoffashion_bigText">Best of Fashion</div>
+                    <a href="https://www.flipkart.com/offers-list/content?screen=dynamic&pk=themeViews%3DDT-OMU-1%3ADealcard~widgetType%3DdealCard~contentType%3Dneo&wid=2.dealCard.OMU&wid=3.dealCard.OMU_3&otracker=hp_omu_Best%2Bof%2BElectronics_3&otracker1=hp_omu_PINNED_neo%2Fmerchandising_Best%2Bof%2BElectronics_NA_wc_view-all_3"
+                        class="viewAllBtn">View All</a>
+                    <div class="bestoffashionmoreOption">
+                        <img src="https://rukminim1.flixcart.com/fk-p-flap/278/278/image/7593e7b6640822c1.jpg?q=90" />
+                    </div>
+                </div>
+
+                <div class="bestoffashion_product_item">
+                   
+                </div>
+
+            </div>
+        </div>
+
+          <!-- second offer section start from hear -->
+          <div class="offer_container">
+            <div class="offerbanner">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKAoBTpXHi5bFFf3tcLTkWeQhTeHr1mc2VTg&usqp=CAU" alt="">
+            </div>
+            <div class="offerbanner">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5h_NtX2bEOrTsAMDOsm2A7AtpIjYyRv_93g&usqp=CAU" alt="">
+            </div>
+            <div class="offerbanner">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnHvHnqt6nptV05FM7aT9qK744er7LaBduJQ&usqp=CAU" alt="">
+            </div>
+           
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+    <script src="javascript.js" type="module"></script>
+    <!-- image slider script link  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </body>
+
+<!--********* js code of sliding section *********** -->
+<script>
+    const swiper = new Swiper('.swiper', {
+        autoplay:{
+            delay:3000,
+            diasbleOnIntraction:false,
+        },
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable:true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
 </html>
