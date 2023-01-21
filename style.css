@@ -18,20 +18,27 @@ main{
     padding: 10px 10px;
 }
 header{
+  
     background-color: #2874f0;
     height: 52px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+/* .navbar{
+    position:fixed ;
+    width: 100%;
+} */
 .logo{
     width: 70px;
     position: relative;
     top:2px;
+   
+    height: 40px;
 }
 .logo img{
     width: 100%;
+    height:35px ;
 }
 .explore{
     width: 80px;
@@ -326,6 +333,9 @@ header{
     height: 100%;
     text-align: center;
 }
+.featureProducts-div a{
+  color: rgba(0, 0, 0, 0.925);
+}
 .featureProducts-div img{
     width: 60%;
     height: 70px;
@@ -339,21 +349,27 @@ color: #000;
 }
 
 
-/******imageSliderContainer*******/
-.imageSliderContainer{
+/*****************image slider css code start from hear***************************/
+.slideshow-container {
+   width: 100%;
    height: 250px;
-    width: 100%;
-    padding: 10px 0px;
-    margin-top: 20px;
-}
-.swiper{
-    width: 100%;
-    height: 250px;
-}
-.swiper-slide img{
-    width: 100%;
-    height: 250px;
-}
+    position: relative;
+    border: 2px solid red;
+  }
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
 
 
 /************* bank partner div style start from hear *************/
@@ -404,6 +420,7 @@ height: 60px;
     width: 100%;
     height: 310px;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  
 
 }
 .bestofElectronicmoreOption{
@@ -464,6 +481,7 @@ height: 60px;
     font-size: 15px;
     padding: 5px;
     letter-spacing: 0.5px;
+
 }
 .bestofElecronic_discount{
     color:#388e3c;
@@ -473,13 +491,45 @@ height: 60px;
 }
 
 
-.bestofElctronic_product_item{
-    display: flex;
-    overflow: hidden;
+.bestofElectronic_Contianer .bestofElctronic_product_item{
+    height: 310px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    
+
+}
+.bestofElectronic_Contianer .card{
+  
+    padding: 8px;
+   width: 100%;
+    height: 310px;
+    text-align: center;
+    
+}
+
+.card p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.678);
+}
+.card h4{
+   color: #1d8622;
+}
+.card img{
+    margin-bottom: 10px;
+    width: 150px;
+    height: 150px;
+
+}
+.image:hover{
+    transform: scale(1.05);
+   
 }
 .bestofElectronic_brand{
     font-size: 12px;
     padding-top: 7px;
+   
 }
 .bestofElectornicProduct_name{
     color:#000;
@@ -487,11 +537,33 @@ height: 60px;
 
 /* offer banner section one and two style start from hear */
 .offer_container{
+    height:100%;
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
    grid-template-rows: 200px 200px;
+   
+   margin-bottom: 60px;
+}
+.offerbanner{
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+
+}
+.offerbanner img{
+    width: 100%;
+    height: 100%;
+}
+/* offer banner section  two style start from hear */
+.secondoffer_container{
+    height:203px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+   grid-template-rows: 200px 200px;
+   
+   margin-bottom: 60px;
 }
 .offerbanner{
     box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
@@ -502,27 +574,25 @@ height: 60px;
     height: 100%;
 }
 
-
 /* fashion section start from hear */
 
 .bestoffashion_Contianer{
     width: 100%;
     height: 310px;
     box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-    margin-top: 20px;
+  margin-top: 15px;
+  
+
 }
-.bestoffashionmoreOption{
+.bestoffashionicmoreOption{
     height: 100px;
     max-width: 100%;
     position: absolute;
     bottom: 0;
     text-align: center;
 }
-.bestoffashionmoreOption img{
-    height: 100%;
-    width: 100%;
-}
-.bestoffashion_item{
+
+.Bestoffashion_item{
     /* background-color: white; */
     min-width: 210px;
     max-width:210px ;
@@ -533,13 +603,7 @@ height: 60px;
     align-items: center;
     flex-direction: column;
 }
-.viewAllBtn{
-    background-color: #2874f0;
-    padding: 6px 16px;
-    border-radius: 3px;
-    color:white;
-    font-size: 15px;
-}
+
 .bestoffashion_bigText{
     font-size: 30px;
     text-align: center;
@@ -548,7 +612,7 @@ height: 60px;
 .bestoffashion_list{
     display: flex;
 }
-.bestOffashion_image_Product{
+.bestoffashion_image_Product{
     height: max-content;
     text-align: center;
     height: 210px;
@@ -557,35 +621,106 @@ height: 60px;
     align-items: center;
     padding: 10px;
 }
-.bestOffashion_image_Product img{
+.bestoffashion_image_Product img{
     width: 90%;
     max-height: 210px;
     display: flex;
     justify-content: center;
     align-items: center;
     
-}
-.bestoffashion_name{
-    font-size: 15px;
-    padding: 5px;
-    letter-spacing: 0.5px;
-}
-.bestoffashion_discount{
-    color:#388e3c;
-}
-.bestoffashion_brand{
-    color:rgb(143, 136, 136);
+    
 }
 
 
-.bestoffashion_product_item{
+.bestoffashion_Contianer .bestoffashion_product_item{
+    height: 310px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    
+
+}
+.bestoffashion_Contianer .card{
+  
+    padding: 8px;
+   width: 100%;
+    height: 310px;
+    text-align: center;
+    
+}
+
+.card p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.678);
+}
+.card h4{
+   color: #1d8622;
+}
+.card img{
+    margin-bottom: 10px;
+    width: 150px;
+    height: 150px;
+
+}
+.image:hover{
+    transform: scale(1.05);
+   
+}
+/* about section styles part start from hear */
+
+.aboout{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+   text-align: justify;
+   line-height: 30PX;
+}
+.aboout p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+};
+
+/* footer section start from hear */
+.footer{
+    border: 2px solid green;
+}
+.toppart{
+    height: 300px;
+    border: 2px solid black;
     display: flex;
-    overflow: hidden;
+    background-color:rgb(28, 30, 54);
+    color: rgba(255, 255, 255, 0.735);
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
-.bestoffashion_brand{
-    font-size: 12px;
-    padding-top: 7px;
+.top-child{
+   
+    width: 16.6%;
 }
-.bestoffashion_name{
-    color:#000;
+.top-child p{
+    margin-top: 10px;
+    font-size: 15px;
+    color: aliceblue;
+    height: 15px;
+    line-height: 20px;
+}
+.top-child h5{
+    color: #7a7a7a;
+}
+.top-child a{
+    color: rgba(255, 255, 255, 0.961);
+    
+}
+.top-child a:hover{
+   text-decoration: underline; 
+}
+#haveborder{
+    border-left: 1px solid rgba(245, 245, 245, 0.279);
+    padding-left: 10px;
 }

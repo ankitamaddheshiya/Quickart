@@ -55,33 +55,5 @@ featureProduct_listEl.innerHTML = featureProductListHTML
 // console.log(featureProductListHTML)
 
 
-/*******************image Slider********************* */
+/*******************image Slider code start from hear********************* */
 
-/*********************************bestofElctronic_product_item */
-let bestofElctronic_product_itemEl = document.querySelector(".bestofElctronic_product_item")
-let bestofElectornicProduct_html = ""
-
-console.log(electronicsProductData)
-electronicsProductData.forEach(el => {
-
-    /* class move div to a tag */  //change done
-    
-    bestofElectornicProduct_html += `
-    <div >
-        <a href="${el.link}" class="BestofElectronic_item">   
-        <div class="bestOfElectornic_image_Product">
-            <img
-                src="${el.img}" />
-        </div>
-        <div class="bestofElectronicmoreOption">
-            <p class="bestofElectornicProduct_name">${el.productName}</p>
-            <p class="bestofElecronic_discount">${el.discount}</p>
-            <p class="bestofElectronic_brand">${el.brand}</p>
-        </div>
-        </a>
-    </div>
-    
-    `
-})
-
-bestofElctronic_product_itemEl.innerHTML = bestofElectornicProduct_html
