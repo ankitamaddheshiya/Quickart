@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/02fd71c999.js" crossorigin="anonymous"></script>
+   
+
+    <title>Document</title>
+    <style>
+        #midsection {
+            display: flex;
+        }
+
+        #midsection_part1 {
+            width: 22%;
+
+        }
+
+        #midsection_part1>h3 {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #midsection_part1 h4 {
+            margin-bottom: 10px;
+        }
+
+        #midsection_part1 label {
+            display: block;
+            margin-bottom: 10px;
+            margin-left: 5px;
+        }
+
+        #midsection_part1 label>input {
+            margin-right: 5px;
+        }
+
+        #midsection_part1>div {
+            background-color: #f3f3f3;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 5px;
+        }
+
+        #midsection_part2 {
+            width: 85%;
+
+        }
+
+        #sort {
+            padding: 5px;
+
+        }
+
+        #midsection_part2>:nth-child(1) {
+            padding: 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 17px 10px;
+            text-align: center;
+
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #midsection_part2>p {
+            margin-left: 5px;
+            color: gray;
+        }
+
+        #midsection_part2>p>span {
+            margin-left: 5px;
+            color: rgb(16, 175, 237);
+            font-size: 13px;
+        }
+
+        #container>div {
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        }
+
+        #container div:hover {
+            cursor: pointer;
+            border: 2px solid rgb(162, 214, 232);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="search_box">
+        <input type="search" placeholder="Search Pc's" id="input_search">
+        <i class="fa-solid fa-magnifying-glass" id="search_btn"></i>
+    </div>
+
+    <div id="midsection">
+        <div id="midsection_part1">
+            <h3>Filters</h3>
+            <div id="productline">
+                <h4>Category</h4>
+                <label for="Men"><input type="checkbox" class="productline" value="Men" id="Men">Men</label>
+                <label for="women"><input type="checkbox" class="productline" value="women" id="women">women</label>
+                <label for="Electonics"><input type="checkbox" class="productline" value="Electonics"
+                        id="Electonics">Electonic</label>
+                <label for="Beauty"><input type="checkbox" class="productline" value="Beauty" id="Beauty">Beauty</label>
+                <label for="Men-Shirts"><input type="checkbox" class="productline" value="Men-Shirts"
+                        id="Men-Shirts">Men-Shirts</label>
+                <label for="Woman-jeans"><input type="checkbox" class="productline" value="Woman-jeans"
+                        id="Woman-jeans">Woman-jeans</label>
+                <label for="home"><input type="checkbox" class="productline" value="home" id="home">home</label>
+
+
+            </div>
+            <div id="price">
+                <h4>Price</h4>
+                <label for="200"><input type="checkbox" class="price" value="1200" id="1200">less tha Rs. 1200</label>
+                <label for="200"><input type="checkbox" class="price" value="200" id="200">less tha Rs. 500</label>
+                <label for="500"><input type="checkbox" class="price" value="500" id="500">above the Rs. 500</label>
+
+            </div>
+            <div id="color">
+                <h4>Color</h4>
+                <label for="Black"><input type="checkbox" class="color" value="Black" id="Black">White</label>
+                <label for="Silver"><input type="checkbox" class="color" value="Silver" id="Silver">Blue</label>
+                <label for="Grey"><input type="checkbox" class="color" value="Grey" id="Grey">Grey</label>
+                <label for="Green"><input type="checkbox" class="color" value="Green" id="Green">Green</label>
+            </div>
+            <div id="Othere">
+                <h4>Offeres</h4>
+                <label for="Black"><input type="checkbox" class="color" value="Black" id="Black">Buy more save
+                    more</label>
+                <label for="Silver"><input type="checkbox" class="color" value="Silver" id="Silver">No Cost EMI</label>
+                <label for="Grey"><input type="checkbox" class="color" value="Grey" id="Grey">Special Offers</label>
+                <label for="Green"><input type="checkbox" class="color" value="Green" id="Green">febric</label>
+                <label for="Green"><input type="checkbox" class="color" value="Green" id="Green">Availibility</label>
+            </div>
+        </div>
+        <div id="midsection_part2">
+            <label for="">Sort by <select name="" id="sort">
+                    <option value="">Select value</option>
+                    <option value="Highest_Price">Highest Price</option>
+                    <option value="Lowest_Price">Lowest Price</option>
+                </select>
+            </label>
+            <p>Home>Clothing and >Accessories >Topwear >T-shirts <br>
+                <span>FLYING MACHINE T-shirts,LEVIS T-shirts ,NAUTICA T-shirts ,Pepe Jeans T-shirts ,WROGN T-shirts
+                    ,PUMA T-shirts ,United Colors of Benetton T-shirts ,ADIDAS T-shirts ,TOMMY HILFIGER T-shirts ,REEBOK
+                    T-shirts</span>
+            </p>
+            </span>
+            <p>T Shirts(Showing 1 – 40 products of 17,657 products)</p>
+            <div id="container">
+                <!--append all laptops here  -->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    let url = "https://63c7708d075b3f3a91cc9ada.mockapi.io/fashion"
+    let sort = document.getElementById("sort");
+    sort.addEventListener("change", sortbyprice);
+     
+
+    let cartItems = JSON.parse(localStorage.getItem("cartProducts"))||[]
+    
+    let search = document.getElementById("search_btn");
+    search.addEventListener("click", searchbytitle);
+
+    let storeData = [];
+    fetch(url)
+        .then(res => res.json())
+        .then((data) => {
+            renderCart(data);
+            storeData = data;
+        });
+
+
+    function renderCart(data) {
+        document.querySelector("#container").innerHTML = "";
+        data.forEach(element => {
+
+            let div = document.createElement("div")
+
+            let image1 = document.createElement("img")
+            image1.setAttribute("src", element.avatar)
+
+            let title = document.createElement("h3")
+            title.innerText = element.title
+            title.style = "color:grey"
+
+            let category = document.createElement("p")
+            category.innerText = element.category;
+
+            let description = document.createElement("p")
+            description.innerText = element.description.substring(0, 75);
+            description.style = "color:orange"
+
+            let price = document.createElement("p")
+            price.innerText = "Rs." + element.price;
+            price.style = "color:green"
+
+            let Btn = document.createElement("button");
+            Btn.textContent = "Add to Cart";
+            // Btn.setAttribute("class","btn btn-primary")
+            // Btn.setAttribute("data-toggle","modal")
+
+            // Btn.setAttribute("data-target","#exampleModal")
+
+            Btn.addEventListener("click",function(){
+            cartItems.push(element)
+
+            localStorage.setItem("cartProducts",JSON.stringify(cartItems))
+            })
+
+
+            div.append(image1, title, category, description, price,Btn)
+            document.querySelector("#container").append(div);
+
+        });
+
+    }
+    // -------------functionalities for filter starts here ----------------
+    // -----------------------Functionality for category filter --------------------
+
+    let productline = document.querySelectorAll(".productline");
+    for (let itm of productline) {
+        itm.addEventListener("change", productlinefilter);
+    }
+
+    function productlinefilter(e) {
+        let select = e.target.value;
+        if (e.target.checked) {
+            let newArr = storeData.filter(function (element) {
+                if (select == "Men") {
+                    return element.category === select;
+                }
+                else if (select == "women") {
+                    return element.category === select;
+                }
+                else if (select == "Electonics") {
+                    return element.category === select;
+                }
+                else if (select == "Beauty") {
+                    return element.category === select;
+                //  element.avatar.style.setAttribute("width", "100px");
+                    
+                }
+                else if (select == "Men-Shirts") {
+                    return element.category === select;
+                }
+                else {
+                    return element.category === select;
+                }
+            })
+            console.log(newArr)
+            renderCart(newArr);
+        } else {
+            renderCart(storeData);
+        }
+    }
+   
+
+    //  ---------------------functionality for short bar -------------------------
+
+    function sortbyprice() {
+        let select = sort.value;
+        if (select === "") {
+            renderCart(storeData);
+        } else {
+            if (select === "Highest_Price") {
+                storeData = storeData.sort(function (a, b) {
+                    return b.price - a.price;
+                });
+            }
+            else if (select === "Lowest_Price") {
+                storeData = storeData.sort(function (a, b) {
+                    return a.price - b.price;
+                });
+            }
+            console.log(storeData)
+            renderCart(storeData);
+        }
+    }
+
+
+    function searchbytitle() {
+        console.log("yes");
+        let input = document.querySelector("#input_search").value;
+        let searchinput = storeData.filter((element) => {
+            return element.title.toLowerCase().includes(input.toLowerCase())
+        });
+        renderCart(searchinput);
+
+
+    }
+    //  functionality by price
+
+    let price = document.querySelectorAll(".price");
+    for (let itm of price) {
+        itm.addEventListener("change", priceFilter);
+    }
+
+    function priceFilter(e) {
+        let select = e.target.value;
+        if (e.target.checked) {
+            let newArr = storeData.filter(function (element) {
+                if (select == "1200") {
+                    return element.price > 1200 && element.price <= 1500;
+                }
+                else if (select == "200") {
+                    return element.price > 200 && element.price <= 500;
+                }
+                else if (select == "500") {
+                    return element.price > 500 && element.price <= 1000;
+                } else {
+                    return element.price > 1500;
+                }
+            })
+            renderCart(newArr);
+        } else {
+            renderCart(storeData);
+        }
+    }
+
+</script>

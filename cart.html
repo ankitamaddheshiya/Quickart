@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 17px 10px;
+            text-align: center;
+         }
+        img {
+            width: 100%;
+        }
+        #container>div {
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        }
+        #container div:hover {
+            cursor: pointer;
+            border: 2px solid rgb(162, 214, 232);
+        }
+
+    </style>
+</head>
+<body>
+    <h3 id="h3">Total Cast</h3>
+    <div id="container"></div>
+</body>
+</html>
+<script>
+    let cartItems = JSON.parse(localStorage.getItem("cartProducts"))
+    console.log(cartItems)
+    displayCard(cartItems)
+
+    
+     function displayCard(data){
+
+    document.querySelector("#container").innerHTML="";
+     data.forEach(function(element,i){
+     let parent = document.querySelector("#container");
+    //we create new product card 
+    let card = document.createElement('div');
+
+    let image1 = document.createElement("img")
+    image1.setAttribute("src", element.avatar)
+
+    let title = document.createElement("h3")
+    title.innerText = element.title
+    title.style = "color:grey"
+
+    let category = document.createElement("p")
+    category.innerText = element.category;
+
+    let description = document.createElement("p")
+    description.innerText = element.description;
+    description.style = "color:orange"
+
+    let price = document.createElement("p")
+    price.innerText = "Rs." + element.price;
+    price.style = "color:green"
+
+    
+
+    let btn = document.createElement('button')
+    btn.textContent ="Delete";
+
+    btn.addEventListener('click',function(){
+        deleteData(i)
+    })
+    card.append(image1,title,category,description,price,btn);
+    parent.append(card)
+           
+    })
+  
+  }
+  function deleteData(i){
+    cartItems = cartItems.filter(function(el,index){
+        return index !== i;
+
+    })
+    localStorage.setItem('cartItems',JSON.stringify('cartItems'))
+
+ //window.location.reload()
+    displayCard(cartItems)
+  }
+
+  let totalCost = cartItems.reduce((acc,el)=>acc + Number(el.price),0);
+    //   totalCost = cartItems.reduce((acc,el)=>acc + Number(el.price),0);
+      document.querySelector("h3").innerText = totalCost;
+    console.log(totalCost)
+ 
+        
+</script>
+</script>
