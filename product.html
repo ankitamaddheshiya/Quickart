@@ -6,106 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/02fd71c999.js" crossorigin="anonymous"></script>
-   
-
+    <link rel="stylesheet" href="product.css">
     <title>Document</title>
-    <style>
-        #midsection {
-            display: flex;
-        }
-
-        #midsection_part1 {
-            width: 22%;
-
-        }
-
-        #midsection_part1>h3 {
-            font-size: 20px;
-            text-align: center;
-        }
-
-        #midsection_part1 h4 {
-            margin-bottom: 10px;
-        }
-
-        #midsection_part1 label {
-            display: block;
-            margin-bottom: 10px;
-            margin-left: 5px;
-        }
-
-        #midsection_part1 label>input {
-            margin-right: 5px;
-        }
-
-        #midsection_part1>div {
-            background-color: #f3f3f3;
-            padding: 15px;
-            margin: 15px;
-            border-radius: 5px;
-        }
-
-        #midsection_part2 {
-            width: 85%;
-
-        }
-
-        #sort {
-            padding: 5px;
-
-        }
-
-        #midsection_part2>:nth-child(1) {
-            padding: 20px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        #container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 17px 10px;
-            text-align: center;
-
-        }
-
-        img {
-            width: 100%;
-        }
-
-        #midsection_part2>p {
-            margin-left: 5px;
-            color: gray;
-        }
-
-        #midsection_part2>p>span {
-            margin-left: 5px;
-            color: rgb(16, 175, 237);
-            font-size: 13px;
-        }
-
-        #container>div {
-            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        }
-
-        #container div:hover {
-            cursor: pointer;
-            border: 2px solid rgb(162, 214, 232);
-        }
-    </style>
 </head>
 
 <body>
+   <div id="header">
+        <div class="logo">
+            <img src="Shopper.png" alt="">
+            <h1>QUICKART</h1>
 
-    <div class="search_box">
-        <input type="search" placeholder="Search Pc's" id="input_search">
-        <i class="fa-solid fa-magnifying-glass" id="search_btn"></i>
+
+        </div>
+        <div class="search_box">
+            <input type="search" placeholder="Search Products here" id="input_search">
+            <i class="fa-solid fa-magnifying-glass" id="search_btn"></i>
+        </div>
+        <div class="head_3"></div>
     </div>
 
+
+    <a href="cart.html">cart button</a>
+
+    <!-- product fetching -->
+        
     <div id="midsection">
         <div id="midsection_part1">
-            <h3>Filters</h3>
+            <h1>Filters</h1>
             <div id="productline">
                 <h4>Category</h4>
                 <label for="Men"><input type="checkbox" class="productline" value="Men" id="Men">Men</label>
@@ -145,6 +72,7 @@
                 <label for="Green"><input type="checkbox" class="color" value="Green" id="Green">Availibility</label>
             </div>
         </div>
+       
         <div id="midsection_part2">
             <label for="">Sort by <select name="" id="sort">
                     <option value="">Select value</option>
@@ -160,22 +88,73 @@
             </span>
             <p>T Shirts(Showing 1 – 40 products of 17,657 products)</p>
             <div id="container">
-                <!--append all laptops here  -->
+                <!--append all product here  -->
             </div>
         </div>
     </div>
-
+    <div class="footer">
+        <div class="toppart">
+            <div class="top-child">
+                <h5>ABOUT</h5>
+                <P><a href="">About Us</a> </P>
+                <P><a href="">Carrers</a></P>
+                <P><a href="">Flipcart Storys</a></P>
+                <P><a href="">Press</a></P>
+                <P><a href="">Flipcart Wholesale</a></P>
+            </div>
+            <div class="top-child">
+                <h5>HELP</h5>
+                <P><a href="">Payment</a> </P>
+                <P><a href="">Shipping</a></P>
+                <P><a href="">Return Policy</a></P>
+                <P><a href="">FAQ</a></P>
+                <P><a href="">Report</a></P>
+            </div>
+            <div class="top-child" >
+                <h5>POLICY</h5>
+                <P><a href="">Return Policy</a> </P>
+                <P><a href="">Term Of Use</a></P>
+                <P><a href="">Security</a></P>
+                <P><a href="">Privecy</a></P>
+                <P><a href="">Sitemap</a></P>
+            </div>
+            <div class="top-child">
+                <h5>SOCIAL</h5>
+                <P><a href="">Face Book</a> </P>
+                <P><a href="">Twitter</a></P>
+                <P><a href="">YouTube</a></P>
+            </div>
+            <div class="top-child" id="haveborder">
+                <h5>Mail Us</h5>
+                <p >
+                    Flipkart Internet Private Limited,Buildings Alyssa,Begonia &Clove Embassy Tech Village,
+    Outer Ring Road, Devarabeesanahalli Village,Bengaluru, 560103,Karnataka, India
+                </p>
+            </div>
+            <div class="top-child">
+                <h5>Registered Office Address:</h5>
+                <p >
+                    Flipkart Internet Private Limited,Buildings Alyssa, Begonia &Clove Embassy Tech Village,Outer Ring Road, Devarabeesanahalli Village,Bengaluru, 560103,Karnataka, IndiaCIN : U51109KA2012PTC066107
+    Telephone: 044-45614700
+                </p>
+            </div>
+        </div>
+        <div></div>
+       </div>
+      
 </body>
 
 </html>
 <script>
+
+
     let url = "https://63c7708d075b3f3a91cc9ada.mockapi.io/fashion"
     let sort = document.getElementById("sort");
     sort.addEventListener("change", sortbyprice);
-     
 
-    let cartItems = JSON.parse(localStorage.getItem("cartProducts"))||[]
-    
+
+    let cartItems = JSON.parse(localStorage.getItem("cartProducts")) || []
+
     let search = document.getElementById("search_btn");
     search.addEventListener("click", searchbytitle);
 
@@ -190,7 +169,7 @@
 
     function renderCart(data) {
         document.querySelector("#container").innerHTML = "";
-        data.forEach(element => {
+        data.forEach((element,i) => {
 
             let div = document.createElement("div")
 
@@ -214,16 +193,25 @@
 
             let Btn = document.createElement("button");
             Btn.textContent = "Add to Cart";
-            // Btn.setAttribute("class","btn btn-primary")
-            // Btn.setAttribute("data-toggle","modal")
 
-            // Btn.setAttribute("data-target","#exampleModal")
+            Btn.addEventListener("click", () => {
+                let cart = JSON.parse(localStorage.getItem("cartProducts")) || [];
 
-            Btn.addEventListener("click",function(){
-            cartItems.push(element)
+                let temp = [];
+                temp.push(element);
+                temp.push(1);
+                cart.push(temp);
 
-            localStorage.setItem("cartProducts",JSON.stringify(cartItems))
+                localStorage.setItem("cartProducts", JSON.stringify(cart));
+                alert("Product added to cart");
+
             })
+
+            // Btn.addEventListener("click",function(){
+            // cartItems.push(element)
+
+            // localStorage.setItem("cartProducts",JSON.stringify(cartItems))
+            // })
 
 
             div.append(image1, title, category, description, price,Btn)
@@ -255,8 +243,8 @@
                 }
                 else if (select == "Beauty") {
                     return element.category === select;
-                //  element.avatar.style.setAttribute("width", "100px");
-                    
+                    //  element.avatar.style.setAttribute("width", "100px");
+
                 }
                 else if (select == "Men-Shirts") {
                     return element.category === select;
@@ -271,7 +259,7 @@
             renderCart(storeData);
         }
     }
-   
+
 
     //  ---------------------functionality for short bar -------------------------
 
