@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/02fd71c999.js" crossorigin="anonymous"></script>
-   
+
 
     <title>Document</title>
     <style>
@@ -172,10 +172,10 @@
     let url = "https://63c7708d075b3f3a91cc9ada.mockapi.io/fashion"
     let sort = document.getElementById("sort");
     sort.addEventListener("change", sortbyprice);
-     
 
-    let cartItems = JSON.parse(localStorage.getItem("cartProducts"))||[]
-    
+
+    let cartItems = JSON.parse(localStorage.getItem("cartProducts")) || []
+
     let search = document.getElementById("search_btn");
     search.addEventListener("click", searchbytitle);
 
@@ -218,15 +218,22 @@
             // Btn.setAttribute("data-toggle","modal")
 
             // Btn.setAttribute("data-target","#exampleModal")
+             Btn.addEventListener("click", () => {
+                let cart = JSON.parse(localStorage.getItem("cartProducts")) || [];
 
-            Btn.addEventListener("click",function(){
-            cartItems.push(element)
+                let temp = [];
+                temp.push(element);
+                temp.push(1);
+                cart.push(temp);
 
-            localStorage.setItem("cartProducts",JSON.stringify(cartItems))
+                localStorage.setItem("cartProducts", JSON.stringify(cart));
+                alert("Product added to cart");
+
             })
 
+           
 
-            div.append(image1, title, category, description, price,Btn)
+            div.append(image1, title, category, description, price, Btn)
             document.querySelector("#container").append(div);
 
         });
@@ -255,8 +262,8 @@
                 }
                 else if (select == "Beauty") {
                     return element.category === select;
-                //  element.avatar.style.setAttribute("width", "100px");
-                    
+                    //  element.avatar.style.setAttribute("width", "100px");
+
                 }
                 else if (select == "Men-Shirts") {
                     return element.category === select;
@@ -271,7 +278,7 @@
             renderCart(storeData);
         }
     }
-   
+
 
     //  ---------------------functionality for short bar -------------------------
 
