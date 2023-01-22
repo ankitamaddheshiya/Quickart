@@ -12,21 +12,27 @@
 
 <body>
    <div id="header">
+   
         <div class="logo">
             <img src="Shopper.png" alt="">
             <h1>QUICKART</h1>
 
-
+      
         </div>
         <div class="search_box">
             <input type="search" placeholder="Search Products here" id="input_search">
             <i class="fa-solid fa-magnifying-glass" id="search_btn"></i>
         </div>
-        <div class="head_3"></div>
+        <a href="cart.html">
+            <div class="card_link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Cart</p>
+            </div>
+        </a>
+
     </div>
 
 
-    <a href="cart.html">cart button</a>
 
     <!-- product fetching -->
         
@@ -204,6 +210,7 @@
 
                 localStorage.setItem("cartProducts", JSON.stringify(cart));
                 alert("Product added to cart");
+                
 
             })
 
