@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="signin.css"> -->
+    <title>Document</title>
+    <style>
+        #header {
+            background-color: blue;
+            display: flex;
+            justify-content: space-around;
+            height: 70px;
+        }
+
+        .logo {
+            width: 18%;
+
+            background-color: white;
+            color: #2d75e7;
+            display: flex;
+
+            border: 1px solid blue;
+
+        }
+
+        .logo h1 {
+            letter-spacing: 2px;
+            margin-left: 5px;
+            margin-bottom: 20px
+        }
+
+        .logo span {
+            font-size: 13px;
+            color: rgb(255, 199, 16);
+            word-spacing: 5px;
+            letter-spacing: 2px;
+            text-align: center;
+
+        }
+
+        .logo img {
+            width: 20%;
+            margin-left: 10px;
+
+        }
+
+        #input_search {
+            height: 40px;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .search_box {
+            display: flex;
+            width: 30%;
+        }
+
+        #search_btn {
+            margin-top: 25px;
+            margin-left: 3px;
+        }
+
+        #middle {
+            display: flex;
+            /* justify-content: center; */
+            width: 50%;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            margin: auto;
+            height: 500px;
+            margin-top: 70px;
+
+        }
+
+        #a1 {
+            width: 50%;
+            background-color: blue;
+            color: white;
+            margin-right: 10px;
+
+        }
+
+        #a1 img {
+            margin-top: 80px;
+        }
+
+        #a1>h1,
+        h4 {
+            margin-left: 10px;
+        }
+
+        #signup {
+            width: 35%;
+            margin-top: 40px;
+        }
+
+        #signup input {
+
+            margin: 8px;
+            width: 120%;
+            height: 40px;
+        }
+
+        #sub {
+            background-color: orange;
+
+            border: none;
+            font-size: 15px;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="logo">
+            <img src="Shopper.png" alt="">
+            <h1>QUICKART</h1>
+
+
+        </div>
+        <div class="search_box">
+            <input type="search" placeholder="Search Products here" id="input_search">
+            <i class="fa-solid fa-magnifying-glass" id="search_btn"></i>
+        </div>
+        <div class="head_3"></div>
+    </div>
+
+    <div id="middle">
+
+        <div id="a1">
+            <h1>Look like you're<br> now here</h1>
+
+            <h4>Sign Up with mobile number <br> to get started</h4>
+            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/login_img_c4a81e.png"
+                alt="">
+        </div>
+
+        <div id="signup">
+            <form>
+
+                <input type="email" id="email" placeholder="Email" required><br>
+                <input type="password" id="password" placeholder="Password" required><br>
+
+                <input type="submit" id="sub" value="Login here" placeholder="Create your account" />
+            </form>
+            <p>Already a mamber?<a href="./signupm.html">SignUp </p></a>
+        </div>
+
+</body>
+
+</html>
+<script>
+    let signin = document.querySelector('form');
+    signin.addEventListener('submit', function (event) {
+        event.preventDefault();
+        let user = signin.email.value;
+        let password = signin.password.value;
+
+        let storeduser = localStorage.getItem('user');
+        let storedpass = localStorage.getItem('password');
+
+        if (user != storeduser) {
+            alert('user not found / registered');
+        } else {
+            if (password != storedpass) {
+                alert('wrong Password');
+            } else {
+                alert('login successful');
+                window.location.href = "product.html"
+            }
+        }
+    })
+
+</script>

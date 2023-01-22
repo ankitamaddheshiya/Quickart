@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header {
+            background-color: blue;
+            display: flex;
+            justify-content: space-around;
+            height: 70px;
+            width: 100%;
+        }
+
+        .logo {
+            width: 18%;
+
+            background-color: white;
+            color: #2d75e7;
+            display: flex;
+
+            border: 1px solid blue;
+
+        }
+
+        .logo h1 {
+            letter-spacing: 2px;
+            margin-left: 5px;
+            margin-bottom: 20px
+        }
+
+        .logo span {
+            font-size: 13px;
+            color: rgb(255, 199, 16);
+            word-spacing: 5px;
+            letter-spacing: 2px;
+            text-align: center;
+
+        }
+
+        .logo img {
+            width: 20%;
+            margin-left: 10px;
+
+        }
+
+        #input_search {
+            height: 40px;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .search_box {
+            display: flex;
+            width: 30%;
+        }
+
+        #search_btn {
+            margin-top: 25px;
+            margin-left: 3px;
+        }
+
+
+        form {
+            width: 25%;
+            margin: auto;
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #f0a628;
+            color: white;
+            padding: 10px 40px;
+            width: 50%;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+
+        }
+
+        .logos {
+            margin-top: 50px;
+            width: 50%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            color: #f0a628;
+        }
+
+        .logos>img {
+            width: 100%;
+        }
+
+        #heading1 {
+            text-align: center;
+            font-size: 50px;
+            font-family: Arial, sans-serif;
+            color: rgb(80, 80, 240)
+        }
+
+
+        .items,
+        .amount {
+            display: flex;
+            font-family: Arial, sans-serif;
+            /* color: #29B6F6; */
+            text-align: center;
+        }
+
+        .card {
+            font-family: Arial, sans-serif;
+            height: 350px;
+            margin: auto;
+            text-align: center;
+            width: 90%;
+            margin-bottom: 50px;
+            /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div id="header">
+        <div class="logo">
+            <img src="Shopper.png" alt="">
+            
+                <h1>QUICKART</h1>
+            
+
+
+        </div>
+        <div class="search_box">
+            <input type="search" placeholder="Search Products here" id="input_search">
+            <i class="fa-solid fa-magnifying-glass" id="search_btn"></i>
+        </div>
+        <div class="head_3"></div>
+    </div>
+
+
+    <div id="payment">
+        <h2 id="heading1">Payment</h2>
+        <form id="form">
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" placeholder="Enter card number" required>
+
+            <label for="card-expiration">Expiration Date:</label>
+            <input type="date" id="card-expiration" placeholder="MM/YY" required>
+
+            <label for="card-cvv">CVV:</label>
+            <input type="password" id="card-cvv" placeholder="CVV" required>
+
+            <button type="submit">Submit Payment</button>
+        </form>
+    </div>
+</body>
+
+</html>
+<script>
+ let cart1 = JSON.parse(localStorage.getItem("cart1")) || [];
+let orders = JSON.parse(localStorage.getItem("order")) || [];
+
+let button2 = document.getElementById("form")
+button2.addEventListener("submit", (e) => {
+    e.preventDefault()
+    var inputs = form.querySelectorAll('form');
+    cart1.forEach(element => {
+        orders.push(element);
+    });
+    localStorage.setItem("order", JSON.stringify(orders));
+    cart1 = [];
+    localStorage.setItem("cart1", JSON.stringify(cart1));
+    window.location.assign("paymentsuccessfull.html")
+
+
+})
+</script>

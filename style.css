@@ -20,65 +20,39 @@ main{
 header{
   
     background-color: #123f87;
-    height: 52px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-/* .navbar{
-    position:fixed ;
-    width: 100%;
-} */
 .logo{
-    width: 70px;
-    position: relative;
-    top:2px;
-  margin-right: 150px;
-   
-    
-}
-.logo img{
-    width: 150%;
-    height: 52px;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-   
-}
-.explore{
-    width: 80px;
+    width: 100%;
+    height: 55px;
+    background-color: white;
+    color: #2d75e7;
     display: flex;
-    white-space: nowrap;
-    display: flex;
-    /* justify-content: center; */
-    align-content: flex-start;
-    height: 100%;
-    position: relative;
-    top:-2px;
-}
-.explore a{
-    display: flex;
-    color: white;
-}
-.explore a:hover{
-    text-decoration: underline;
-}
-.explore p{
-    margin:0;
-    font-size: 12px;
-    font-style: italic;
-    font-weight: 550;
-    color:white;
+    border: 1px solid blue;
     
-}
-.explore img{
-    width: 10px;
-    height: 10px;
-    margin: 0;
-}
-.plus-icon{
-    color:#ffe500;
-    
-}
+     
+  }
+  .logo h2{
+      letter-spacing: 2px;
+      font-weight: bolder;
+      margin-left: 10px;
+  }
+  .logo span{
+      font-size: 13px;
+      color: rgb(255, 199, 16);
+      word-spacing: 5px;
+      letter-spacing: 2px;
+      text-align: center;
+  }
+  img{
+      width: 20%;
+      margin-left: 5px;
+      
+  }
+  
 
 /******search_container******/
 .search_container{
