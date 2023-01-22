@@ -10,6 +10,80 @@
 
     <title>Document</title>
     <style>
+        #header {
+            background-color: blue;
+            display: flex;
+            justify-content: space-around;
+            height: 70px;
+        }
+
+        .logo {
+            width: 18%;
+
+            background-color: white;
+            color: #2d75e7;
+            display: flex;
+
+            border: 1px solid blue;
+
+        }
+
+        .logo h1 {
+            letter-spacing: 2px;
+            margin-left: 5px;
+            margin-bottom: 20px
+        }
+
+        .logo img {
+            width: 20%;
+            margin-left: 10px;
+
+        }
+
+        #input_search {
+            height: 40px;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .search_box {
+            display: flex;
+            width: 30%;
+        }
+
+        #search_btn {
+            margin-top: 25px;
+            margin-left: 3px;
+        }
+
+        .card_link {
+            display: flex;
+            font-size: 20px;
+            font-weight: 550;
+            color: white;
+            margin-left: 10px;
+            margin-top: 20px;
+            
+        }
+        .card_link a{
+            color: #f3f3f3;
+            text-decoration: none;
+        }
+
+        #sort {
+            margin-top: 10px;
+            padding: 5px;
+            font-weight: bolder;
+            color: rgb(234, 100, 100);
+            font-size: 15px;
+        }
+
+        select {
+            width: 20%;
+            height: 40px;
+        }
+
+
         #midsection {
             display: flex;
         }
@@ -19,7 +93,7 @@
 
         }
 
-        #midsection_part1>h3 {
+        #midsection_part1>h1 {
             font-size: 20px;
             text-align: center;
         }
@@ -47,11 +121,7 @@
 
         #midsection_part2 {
             width: 85%;
-
-        }
-
-        #sort {
-            padding: 5px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 
         }
 
@@ -93,19 +163,39 @@
             cursor: pointer;
             border: 2px solid rgb(162, 214, 232);
         }
+
+        button {
+            background-color: rgb(61, 61, 232);
+            color: white;
+            width: 50%;
+            height: 40px;
+            font-size: 15px;
+            border-radius: 5px;
+            border: none;
+        }
     </style>
 </head>
 
 <body>
+    <div id="header">
+        <div class="logo">
+            <img src="Shopper.png" alt="">
+            <h1>QUICKART</h1>
+        </div>
+        <div class="search_box">
+            <input type="search" placeholder="Search Products here" id="input_search">
+            <i class="fa-solid fa-magnifying-glass" id="search_btn"></i>
+        </div>
 
-    <div class="search_box">
-        <input type="search" placeholder="Search Pc's" id="input_search">
-        <i class="fa-solid fa-magnifying-glass" id="search_btn"></i>
+        <div class="card_link">
+            <i class="fa-solid fa-cart-shopping"></i>
+             <a href="cart.html">Cart</a>
+        </div>
     </div>
 
     <div id="midsection">
         <div id="midsection_part1">
-            <h3>Filters</h3>
+            <h1>Filters</h1>
             <div id="productline">
                 <h4>Category</h4>
                 <label for="Men"><input type="checkbox" class="productline" value="Men" id="Men">Men</label>
@@ -118,9 +208,7 @@
                 <label for="Woman-jeans"><input type="checkbox" class="productline" value="Woman-jeans"
                         id="Woman-jeans">Woman-jeans</label>
                 <label for="home"><input type="checkbox" class="productline" value="home" id="home">home</label>
-
-
-            </div>
+           </div>
             <div id="price">
                 <h4>Price</h4>
                 <label for="200"><input type="checkbox" class="price" value="1200" id="1200">less tha Rs. 1200</label>
@@ -214,24 +302,19 @@
 
             let Btn = document.createElement("button");
             Btn.textContent = "Add to Cart";
-            // Btn.setAttribute("class","btn btn-primary")
-            // Btn.setAttribute("data-toggle","modal")
-
-            // Btn.setAttribute("data-target","#exampleModal")
-             Btn.addEventListener("click", () => {
+        
+            Btn.addEventListener("click", () => {
                 let cart = JSON.parse(localStorage.getItem("cartProducts")) || [];
-
                 let temp = [];
                 temp.push(element);
                 temp.push(1);
                 cart.push(temp);
-
-                localStorage.setItem("cartProducts", JSON.stringify(cart));
+            localStorage.setItem("cartProducts", JSON.stringify(cart));
                 alert("Product added to cart");
 
             })
 
-           
+
 
             div.append(image1, title, category, description, price, Btn)
             document.querySelector("#container").append(div);

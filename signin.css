@@ -1,0 +1,133 @@
+#header {
+    background-color: blue;
+     display: flex;
+     justify-content: space-around;
+     height: 70px;
+ }
+
+ .logo {
+     width: 18%;
+  
+     background-color: white;
+     color: #2d75e7;
+     display: flex;
+     
+     border: 1px  solid blue;
+    
+ }
+
+ .logo h1 {
+     letter-spacing: 2px;
+     margin-left: 5px;
+     margin-bottom: 20px
+     
+ }
+ .logo span {
+     font-size: 13px;
+     color: rgb(255, 199, 16);
+     word-spacing: 5px;
+     letter-spacing: 2px;
+     text-align: center;
+    
+ }
+
+ .logo img {
+     width: 20%;
+     margin-left: 10px;
+
+ }
+ #input_search{
+     height: 40px;
+     width: 100%;
+     margin-top: 15px;
+ }
+ .search_box{
+     display: flex;
+     width: 30%;
+ }
+ #search_btn{
+     margin-top: 25px;
+     margin-left: 3px;
+ }
+#middle{
+display: flex;
+/* justify-content: center; */
+width: 50%;
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+margin: auto;
+height: 500px;
+margin-top: 70px;
+
+}
+#a1{
+ width: 50%;
+ background-color: blue;
+ color: white;
+ margin-right: 10px;
+ 
+}
+#a1 img{
+ margin-top: 80px;
+}
+#a1>h1,h4{
+margin-left: 10px;
+}
+#signup{
+ width: 35%;
+ margin-top: 40px;
+}
+
+#signup input{
+
+margin: 8px;
+width: 120%;
+height: 40px;
+}
+#sub{
+ background-color: orange;
+
+ border: none;
+ font-size: 15px;
+ color: white;
+ border-radius: 5px;
+}
+.footer{
+    border: 2px solid green;
+}
+.toppart{
+    height: 300px;
+    border: 2px solid black;
+    display: flex;
+    background-color:rgb(28, 30, 54);
+    color: rgba(255, 255, 255, 0.735);
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.top-child{
+   
+    width: 16.6%;
+}
+.top-child p{
+    margin-top: 10px;
+    font-size: 15px;
+    color: aliceblue;
+    height: 15px;
+    line-height: 20px;
+}
+.top-child h5{
+    color: #7a7a7a;
+}
+.top-child a{
+    color: rgba(255, 255, 255, 0.961);
+    
+}
+.top-child a:hover{
+   text-decoration: underline; 
+}
+#haveborder{
+    border-left: 1px solid rgba(245, 245, 245, 0.279);
+    padding-left: 10px;
+}
