@@ -358,9 +358,15 @@ color: #000;
    width: 100%;
    height: 250px;
     position: relative;
-    border: 2px solid red;
   }
   
+  containerBody{min-width:100%;}
+#myCarousel .carousel-inner,#myCarousel .carousel-item { height: 250px;}#myCarousel .carousel-item img { height: 250px; object-fit: cover; object-position: center;}
+#myCarousel .carousel-caption{text-align: left;left:5%;}#myCarousel .carousel-inner,#myCarousel .carousel-item { height: 250px;}#myCarousel .item{height:250px}
+#myCarousel .carousel-inner,#myCarousel .carousel-item { height: 250px;}
+.carousel-item { background-color: #000;}#myCarousel .carousel-item img { height: 250px; object-fit: cover; 
+  object-position: center;}.containerBody1 .item{max-width: 96%;margin-left:2%;
+  margin-bottom: 2rem;}
 
   
   
